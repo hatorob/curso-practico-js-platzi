@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #4834d4;
+    ;
+}
+
+.header {
+    background-color: #c7ecee;
+    color: #4834d4;
+    text-align: center;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.seccionOne {
+    background-color: #7ed6df;
+    height: 100%;
+}
+
+.cuadrado {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.cuadrado__container h2 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form label {
+    text-align: center;
+}
+
+.form input {
+    width: 200px;
+    margin: 10px auto;
+}
+
+.form button {
+    width: 200px;
+    margin: 10px auto;
+}
+
+.resultado h2 {
+    padding: 50px;
+}
+
+.ImprimirResultado {
+    background-color: #c7ecee;
+    height: 100px;
+    margin-top: 10px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#resultado {
+    font-size: 40px;
+}
+
+.triangulo {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.triangulo__contianer h2 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.circulo {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 20px;
+}
+
+.circulo__contianer h2 {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer {
+    background-color: #c7ecee;
+    color: #4834d4;
+    text-align: center;
+    height: 80px;
+    font-size: 30px;
+    padding-top: 20px;
+}
+
+#resultadoTraingulo {
+    font-size: 40px;
+}
+
+#resultadoCirculo {
+    font-size: 40px;
+}
