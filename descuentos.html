@@ -35,6 +35,25 @@
 
         </div>
     </section>
+    <section>
+        <h2>Calcula el precio a pagar de tus productos con descuento</h2>
+        <div>
+            <h3>Play 4</h3>
+            <p>Precio: $400</p>
+        </div>
+        <form action="#">
+            <label for="cupones">Escoje el cupon que tienes!</label>
+            <select name="cupones" id="cupones">
+                <option value="cuponRegalo">Cupon de Regalo</option>
+                <option value="cuponCompraAnterior">Cupon por compra anterior</option>
+                <option value="cuponNavideno">Cupon de Navidad</option>
+            </select>
+            <button type="button" onclick="ImprimirPrecioConDescuentoCupon()">Calcular el precio con descuento</button>
+        </form>
+        <div id="resultadoCupon">
+
+        </div>
+    </section>
 
     <script src="./descuentos.js"></script>
 </body>
