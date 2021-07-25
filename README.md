@@ -15,3 +15,11 @@
 - tercer: Crear funciones
 - cuarto: integrar JS con html
 
+## Taller N3: promedio, mediana y moda
+
+- Primer: definir las fórmulas
+- Segundo: implementar las formulas en js
+- tercer: Crear funciones
+- cuarto: integrar JS con html
+
+
