@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>Ahorros y Gastos Mensuales</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>PLAN DE AHORROS Y GASTOS MENSUALES</h1>
+    </header>
+
+    <main class="main">
+        <div class="main-container">
+            <div class="main__presupuesto">
+                <form action="#">
+                    <label for="sueldo">
+                        Ingresa tu sueldo
+                    </label>
+                    <input id="sueldo" type="number">
+                    <label for="ahorroPorcentaje">
+                        Escoge el porcentaje de ahorro de preferencia
+                    </label>
+                    <select name="ahorroPorcentaje" id="ahorroPorcentaje">
+                        <option value="tenPorcent">10%</option>
+                        <option value="twentyPorcet">20%</option>
+                        <option value="thirtyPorcent">30%</option>
+                        <option value="fourtyPorcent">40%</option>
+                        <option value="fiftyPorcent">50%</option>
+                    </select> <br>
+                    <label for="pagosObligatorios">
+                        Ingresa tus deudas obligatorias
+                    </label>
+                    <input id="pagosObligatorios" type="number">
+                    <button type="button" onclick="calcularAhorroConDisponible()">CALCULAR</button>
+                </form>
+            </div>
+            <div class="main__resultados">
+                <div class="resultado-ahorro">
+                    <h1>AHORRO MENSUAL</h1>
+                    <div class="resultado-ahorro__container">
+                        <p id="imprimir-ahorro" class="resultado-ahorro__imprimir">0</p>
+                    </div>
+                </div>
+                <div class="resultado-gastos">
+                    <h1>DISPONIBLE MENSUAL</h1>
+                    <div class="resultado-gastos__container">
+                        <p id="imprimir-disponible" class="resultado-gastos__imprimir">0</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="items">
+        <div class="items-container">
+            <div class="intems__transporte target">
+                <h1>TRANSPORTE</h1>
+                <div class="items-datos">
+                    <div class="items-datos__radius disponible">
+                        <p id="imprimir-disponible__transporte" class="resultado-disponible">200</p>
+                    </div>
+                    <p>Disponible</p>
+                </div>
+                <div class="items-datos">
+                    <div class="items-datos__radius gastado">
+                        <p id="imprimir-gasto__transporte" class="resultado-gastado">0</p>
+                    </div>
+                    <form action="#">
+                        <label for="gastos-transporte">
+
+                        </label>
+                        <input id="gastos-transporte" type="number">
+                        <button type="buton" class="btn" onclick="gastosTransporte()">Guardar gastos</button>
+                    </form>
+                </div>
+                <div class="items-datos">
+                    <div class="items-datos__radius relación">
+                        <p id="resultado-relacion__transporte" class="resultado-relacion">0%</p>
+                    </div>
+                    <p>Relación</p>
+                </div>
+            </div>
+
+            <div class="intems__libres target">
+                <h1>COMIDA</h1>
+                <div class="items-datos">
+                    <div class="items-datos__radius disponible">
+                        <p id="imprimir-disponible__comida" class="resultado-disponible">200</p>
+                    </div>
+                    <p>Disponible</p>
+                </div>
+                <div class="items-datos">
+                    <div class="items-datos__radius gastado">
+                        <p id="imprimir-gasto__comida" class="resultado-gastado">0</p>
+                    </div>
+                    <form action="#">
+                        <label for="gastos-comida">
+
+                        </label>
+                        <input id="gastos-comida" type="number">
+                        <button type="buton" class="btn" onclick="gastosComida()">Guardar gastos</button>
+                    </form>
+                </div>
+                <div class="items-datos">
+                    <div class="items-datos__radius relación">
+                        <p id="resultado-relacion__comida" class="resultado-relacion">0%</p>
+                    </div>
+                    <p>Relación</p>
+                </div>
+            </div>
+
+            <div class="intems__servicios target">
+                <h1>SERVICIOS</h1>
+                <div class="items-datos">
+                    <div class="items-datos__radius disponible">
+                        <p id="imprimir-disponible__servicios" class="resultado-disponible">200</p>
+                    </div>
+                    <p>Disponible</p>
+                </div>
+                <div class="items-datos">
+                    <div class="items-datos__radius gastado">
+                        <p id="imprimir-gasto__servicios" class="resultado-gastado">0</p>
+                    </div>
+                    <form action="#">
+                        <label for="gastos-servicios">
+
+                        </label>
+                        <input id="gastos-servicios" type="number">
+                        <button type="buton" class="btn" onclick="gastosServicios()">Guardar gastos</button>
+                    </form>
+                </div>
+                <div class="items-datos">
+                    <div class="items-datos__radius relación">
+                        <p id="resultado-relacion__servicios" class="resultado-relacion">0%</p>
+                    </div>
+                    <p>Relación</p>
+                </div>
+            </div>
+
+            <div class="intems__libres target">
+                <h1>LIBRES</h1>
+                <div class="items-datos">
+                    <div class="items-datos__radius disponible">
+                        <p id="imprimir-disponible__libres" class="resultado-disponible">200</p>
+                    </div>
+                    <p>Disponible</p>
+                </div>
+                <div class="items-datos">
+                    <div class="items-datos__radius gastado">
+                        <p id="imprimir-gasto__libres" class="resultado-gastado">0</p>
+                    </div>
+                    <form action="#">
+                        <label for="gastos-libres">
+
+                        </label>
+                        <input id="gastos-libres" type="number">
+                        <button type="buton" class="btn" onclick="gastosLibres()">Guardar gastos</button>
+                    </form>
+                </div>
+                <div class="items-datos">
+                    <div class="items-datos__radius relación">
+                        <p id="resultado-relacion__libres" class="resultado-relacion">0%</p>
+                    </div>
+                    <p>Relación</p>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    background-color: #3742FA;
+}
+
+.header {
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 3.4rem;
+    margin-top: 20px;
+}
+
+.header h1 {
+    width: 80%;
+    margin: 0 auto;
+}
+
+main {
+    margin-top: 40px;
+}
+
+.main-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.main__presupuesto {
+    display: flex;
+    flex-direction: column;
+}
+
+.main__presupuesto label {
+    font-size: 2.2rem;
+    color: white;
+    text-align: center;
+}
+
+.main__presupuesto input {
+    width: 100%;
+    height: 35px;
+    margin: 20px 0;
+    font-size: 2rem;
+}
+
+.main__presupuesto select {
+    width: 60%;
+    height: 35px;
+    margin: 20px 0;
+    font-size: 2rem;
+}
+
+button {
+    width: 100%;
+    height: 35px;
+    border-radius: 2rem;
+    border: none;
+    font-size: 1.5rem;
+}
+
+.main__resultados {
+    background-color: white;
+    height: 310px;
+    margin-top: 30px;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    font-size: 4rem;
+    text-align: center;
+    padding: 20px;
+}
+
+.resultado-gastos__container,
+.resultado-ahorro__container {
+    width: 80px;
+    height: 80px;
+    background-color: #70A1FF;
+    border-radius: 100%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+}
+
+.resultado-ahorro__imprimir,
+.resultado-gastos__imprimir {
+    font-size: 1.8rem;
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+}
+
+.items {
+    width: 80%;
+    margin: 40px auto;
+}
+
+.items-container p {
+    font-size: 1.1rem;
+}
+
+.target {
+    margin-bottom: 40px;
+    height: 170px;
+    background-color: white;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 25px 1fr;
+    border-radius: 9px;
+}
+
+.target h1 {
+    font-size: 2.4rem;
+    grid-column: 1 / 4;
+}
+
+.items-datos__radius {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+}
+
+.disponible {
+    background-color: #2ECC71;
+}
+
+.gastado {
+    background-color: #E67E22;
+}
+
+.btn {
+    background-color: #70A1FF;
+    width: 70%;
+    height: 25px;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+#gastos-transporte,
+#gastos-comida,
+#gastos-servicios,
+#gastos-libres,
+input {
+    height: 20px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #70A1FF;
+    font-size: 1rem;
+}
+
+.relación {
+    background-color: #70A1FF;
+}
+
+.resultado-disponible,
+.resultado-gastado,
+.resultado-relacion {
+    font-size: 1.3rem;
+    width: 80%;
+    margin: 0 auto;
+    color: white;
+}
+
+@media (min-width: 650px) {
+    .items-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .main-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10%;
+        border: 10px solid #70A1FF;
+    }
+    .main__resultados {
+        margin-top: 0;
+        height: 100%;
+    }
+    .main__presupuesto {
+        padding: 20px;
+    }
+    .items-container {
+        margin-top: 80px;
+    }
+    .target:hover {
+        border: 10px solid #70A1FF;
+    }
+}
